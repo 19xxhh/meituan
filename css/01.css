@@ -1,0 +1,37 @@
+h2 {
+  font-size: 100px; }
+
+div:after {
+  content: 123; }
+
+p:after {
+  content: "liagnliang ate 250 baozis";
+  width: 97px;
+  height: 108.66667px;
+  color: #335577;
+  background: #1f3347;
+  background: rgba(31, 51, 71, 0.6);
+  background: blue; }
+
+div {
+  width: 90px; }
+
+div {
+  width: 110px; }
+
+.my-rounded, .child {
+  border: 1px solid #f00;
+  border-radius: 50%; }
+
+.child {
+  box-shadow: 0 0 10px; }
+
+.my-bottom-border, .my-bottom-shadow {
+  border: 2px solid #ff0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px; }
+
+.my-bottom-shadow {
+  border-color: #f00; }
+  .my-bottom-shadow:hover {
+    border-bottom: #00f; }

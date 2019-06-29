@@ -1,0 +1,115 @@
+.jumbotron{
+    background:#fff;
+    position:relative;
+}
+.service{
+    opacity: 0.2;
+    font:100px bold;
+    text-align: center;
+}
+.service-border{
+    border:3px solid orange;
+    width:70px;height:80px;
+    position:absolute;
+    top:130px;left:47%;
+    
+}
+
+.fwjs{
+    text-align: center;
+    margin-top:-55px;
+}
+
+
+
+/* 第二部分 */
+.daohang li{
+    margin:30px 0;
+}
+.text-title{
+    font-size:40px;
+    color:#000;
+    margin-left:20px
+}
+.daohang  a{
+    color:#000;
+}
+.daohang a:hover{
+    color:orange;
+} 
+/* 左边大字部分鼠标悬停的效果 */
+.ddfs:hover{
+    font-size:40px;
+}
+/* 小字部分 */
+.text-small{
+    margin-left:60px;
+}
+
+/* 手机样式 */
+.iphone{
+    border:20px solid #000;
+    width:350px;height:705px;
+    border-radius:3rem
+}
+.carousel-indicators li{
+    width:0.8rem;height:0.8rem;
+    background:#000;border-radius: 50%;
+    margin-right:6px;
+    margin-left:6px;
+}
+.carousel-indicators .active{background:#f00}
+
+
+
+
+
+
+
+/* 第三部分 */
+.third{
+    width:2000px;height:900px;
+    background:linear-gradient(-135deg, #FFD161 0%, #FFBD27 100%);
+    margin-left:-30rem;
+    margin-top:-25px;
+}
+.service-border2{
+    border:3px solid #fff;
+    width:70px;height:80px;
+    position:absolute;
+    top:150px;left:48%;
+}
+
+.service2{
+    opacity: 0.2;
+    font:100px bold;
+    text-align: center;
+    margin-top:70px;
+}
+
+/* 轮播图 */
+.third-text{
+    width:620px;height:340px;
+   
+}
+.lunmo2{
+    margin-top:-500px;
+}
+
+.jiantou{
+    width:4%;height:20%;
+    top:40%;
+    border-radius:0.25rem;
+    margin-left:-50px;
+}
+.zhishi li{
+    width:0.8rem;height:0.8rem;
+    background:#fff;border-radius: 50%;
+    
+    
+}
+
+.s1{
+    position:absolute;
+    top:80px;left:20px;
+}
