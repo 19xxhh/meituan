@@ -136,7 +136,9 @@
     font-size:16px;
     color:#888;
     -webkit-line-clamp: 3;
+    overflow:hidden;
+    line-height:28px;
     text-overflow: ellipsis;
-    
-
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
 }
