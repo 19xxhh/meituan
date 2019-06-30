@@ -113,3 +113,30 @@
     position:absolute;
     top:80px;left:20px;
 }
+
+
+
+       /* news */
+.news{
+    margin-top:90px;
+}
+
+/* 轮播图 */
+.news-title{
+    width:320px;height:68px;
+    font-family:PingFangSC-Semibold,Microsoft Yahei,Arial,Helvetica,sans-serif;
+    font-size:24px;
+    color:#000;
+    line-height:34px;
+    font-weight:bold;
+    margin:0;
+}
+.artical{
+    width:320px;height:84px;
+    font-size:16px;
+    color:#888;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    
+
+}

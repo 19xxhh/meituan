@@ -91,5 +91,11 @@
     background:#000;border-radius: 50%;
     margin-right:6px;
     margin-left:6px;
+    display:none;
 }
 .carousel-indicators .active{background:#f00}
+.cc{
+    position:absolute;
+    top:80px;left:100px;
+    display:none;
+}
