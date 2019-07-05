@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="uname"><br>
+	<input type="password" id="upwd"><br>
+	<button onclick="login()">登录</button>
+
+	<script>
+		function login(){
+			// 1 获取异步对象
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					alert(result);
+				}
+			}
+			// 创建请求
+			xhr.open("post","/user/v1/login",true);
+			// 设置请求头
+		
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata="uname="+uname.value+"&upwd="+upwd.value;
+				xhr.send(formdata);
+		}
+	</script>
+	
+</body>
+</html>

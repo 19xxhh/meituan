@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body onload="queryUser()">
+		用户名称:<input type="text" id="uname"><br>
+		用户邮箱:<input type="text" id="email"><br>
+		联系方式:<input type="text" id="phone"><br>
+		真实姓名:<input type="text" id="user_name"><br>
+		用户性别:<input type="radio" id="m" value="1" name="gender"><label for="m">男</label>
+		<input type="radio" id="f" value="0" name="gender"><label for="f">女</label><br>
+		<button onclick="updateUser()">修改</button>
+	<script>
+		function updateUser(){
+			//获取页面上所有信息
+			var urlPar=new URLSearchParams(location.search);
+			var $uid=urlPar.get("uid");
+			var $uname=uname.value;
+			var $email=email.value;
+			var $phone=phone.value;
+			var $user_name=user_name.value;
+			var $gender="";
+			if(m.checked){
+				$gender="1";
+			}else{
+				$gender="0";
+			}
+			//1.获取异步对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					if(result==1){
+						alert("修改成功");
+						window.location.href="http://127.0.0.1:8080/user_list.html"
+					}else{
+						alert("修改失败");
+					}
+				}
+			}
+			//2.创建请求
+			xhr.open("put","/user/v1/update",true);
+			//3.发送请求
+			var formdata="uname="+$uname+"&email="+$email+"&phone="+$phone+"&user_name="+$user_name+"&gender="+$gender+"&uid="+$uid;
+			//修改消息头
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			xhr.send(formdata);
+
+		}
+		function	queryUser(){
+			//获取url中?后面的参数
+			var urlPar=new URLSearchParams(location.search);
+			//获取前面一页传递过来的UID
+			var uid=urlPar.get("uid");
+			//1.获取异步对象
+			var xhr=new XMLHttpRequest();
+			//4.绑定监听
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					var result=xhr.responseText;
+					var obj_u=JSON.parse(result)[0];
+					console.log(obj_u);
+					uname.value=obj_u.uname;
+					email.value=obj_u.email;
+					phone.value=obj_u.phone;
+					user_name.value=obj_u.user_name;
+				//性别在单选框中显示
+					if(obj_u.gender==1){
+						m.checked=true;
+					}else{
+						f.checked=true;
+					}
+				}
+			}
+			//2.创建请求
+			xhr.open("get","/user/v1/query/"+uid,true);
+			//3.发送请求
+			xhr.send();
+		}
+	</script>
+	</body>
+
+</html>	
