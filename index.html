@@ -153,7 +153,7 @@
                                     <p>美团服务市场</p>
                                     <h4><strong>米粉面馆接入经营助手服务，收入增幅达51.52%</strong></h4>
                                     <div class="story-artical">开一家店有多操心？加盟、选址、经营、管理到真正赚钱，期间的辛苦只有每家店老板才深有体会。美团服务市场聚集垂直领域优质服务商，打造一站式服务生态！从新店开业到老店升级、从店铺装修到营销托管、从食材供应到金融服务等，为所有商家提供店铺经营全方位服务，解决经营所遇难题，助力轻松做生意。</div> 
-                                    <a class="btn" href="#">查看详情</a>
+                                    <a class="history-btn" href="#">查看详情</a>
                                 </div>
                             </td>
                             <td>
@@ -296,6 +296,24 @@
         </div>
     </div>
 </div>
+<script>
+    var a=0;
+    function test1() { 
+        var a=1;
+        console.log(this.a);  //?    
+        function test2() {
+        var a=2; 
+        console.log(this.a);  //?  
+        function test3() {
+        var a=3;
+        console.log(this.a);  //?        
+        }    
+         test3();   
+        } 
+        test2();
+        }
+        test1();
 
+</script>
 </body>
 </html>
